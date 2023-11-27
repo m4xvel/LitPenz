@@ -1,50 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LitPenz</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <header class="header">
-        <div class="container">
-            <nav class="nav">
-                <a href="" class="name">LitPenz</a>
-                <ul class="menu">
-                    <li class="menu__list">
-                        <a href="#" class="menu__link">
-                            Произведения
-                        </a>
-                    </li>
-                    <li class="menu__list">
-                        <a href="#" class="menu__link">
-                            Авторы
-                        </a>
-                    </li>
-                </ul>
-                <a href="" class="logo">
-                    <img src="img/logo.svg" alt="">
-                </a>
-                <ul class="menu">
-                    <li class="menu__list">
-                        <a href="#" class="menu__link">
-                            Отзывы
-                        </a>
-                    </li>
-                    <li class="menu__list">
-                        <a href="#" class="menu__link">
-                            О проекте
-                        </a>
-                    </li>
-                </ul>
-                <a href="#" class="profile">
-                    <span class="profile__text">Войти</span>
-                    <img src="img/profile.svg" alt="">
-                </a>
-            </nav>
-        </div>
+      <div class="container">
+        <nav class="nav">
+          <a href="" class="name">LitPenz</a>
+          <ul class="menu">
+            <li class="menu__list">
+              <a href="#" class="menu__link"> Произведения </a>
+            </li>
+            <li class="menu__list">
+              <a href="#" class="menu__link"> Авторы </a>
+            </li>
+          </ul>
+          <a href="" class="logo">
+            <img src="img/logo.svg" alt="" />
+          </a>
+          <ul class="menu">
+            <li class="menu__list">
+              <a href="#" class="menu__link"> Отзывы </a>
+            </li>
+            <li class="menu__list">
+              <a href="#" class="menu__link"> О проекте </a>
+            </li>
+          </ul>
+          <a href="#" class="profile">
+            <span class="profile__text">Войти</span>
+            <img src="img/profile.svg" alt="" />
+          </a>
+        </nav>
+      </div>
     </header>
-</body>
+    <main class="main">
+      <section class="penza">
+        <div class="container">
+          <h1 class="title">Онлайн-библиотека Пензенского края</h1>
+          <div class="search">
+            <button class="сatalog">
+              <img src="img/catalog.svg" alt="" />
+              Каталог
+            </button>
+            <form class="search__items">
+              <input
+                type="text"
+                placeholder="Искать здесь..."
+                class="search__input"
+              />
+              <button type="submit" class="search__button">Поиск</button>
+            </form>
+          </div>
+          <div class="border"></div>
+          <div class="main__block">
+            <img src="img/penza.jpg" alt="penza" class="main__img" />
+            <span class="main__text">
+              Пензенский край не случайно называют «второй литературной
+              столицей» России — здесь родились и провели значительную часть
+              своей жизни Куприн, Лесков, Салтыков-Щедрин, Михаил Загоскин —
+              основоположник русского исторического романа, а еще Радищев,
+              Лермонтов, Белинский и другие классики отечественной и мировой
+              литературы. Денис Давыдов называл Пензу Парнасом, Лев Толстой —
+              русской Швейцарией, а Вяземский в письме к Тургеневу отмечал, что
+              в городе на Суре интеллектуальной жизни «немногим менее чем в
+              Москве». Гении русской литературы навсегда связаны с Пензенским
+              краем. Строка «Люблю Отчизну я», вышедшая из-под пера Михаила
+              Лермонтова, сказана и о его родных Тарханах, где он провел
+              половину своей столь короткой жизни.
+            </span>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <h2 class="section__title">Произведения</h2>
+          <div class="section__block">
+            <a href="#" class="section__item">
+              <img src="img/geroi-nashego-vremeny.jpg" alt="" />
+              <span class="section__name">Герой нашего времени</span>
+            </a>
+            <a href="#" class="section__item">
+              <img src="img/askaldova-mogila.jpg" alt="" />
+              <span class="section__name">Аскольдова могила</span>
+            </a>
+            <a href="#" class="section__item">
+              <img src="img/oprokinuti-kupol.jpg" alt="" />
+              <span class="section__name">Опрокинутый купол</span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <h2 class="section__title">Авторы</h2>
+          <div class="section__block">
+            <a href="#" class="section__item">
+              <img src="img/lermontov.jpg" alt="" />
+              <span class="section__name">Лермонтов Михаил Юрьевич</span>
+            </a>
+            <a href="#" class="section__item">
+              <img src="img/zagoskin.jpg" alt="" />
+              <span class="section__name">Загоскин Михаил Николаевич</span>
+            </a>
+            <a href="#" class="section__item">
+              <img src="img/buyanov.jpg" alt="" />
+              <span class="section__name">Буянов Николай Анатольевич</span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <h3 class="section__title">Отзывы</h3>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <h3 class="section__title">О проекте</h3>
+          <div class="section__block">
+            <div class="section__item">
+              <img src="img/planeta.svg" alt="" />
+              <span class="section__name-no__link"
+                >Разнообразие литературного наследия Пензенской области
+              </span>
+            </div>
+            <div class="section__item">
+              <img src="img/pero.svg" alt="" />
+              <span class="section__name-no__link"
+                >Вдохновение талантом местных писателей
+              </span>
+            </div>
+            <div class="section__item">
+              <img src="img/books.svg" alt="" />
+              <span class="section__name-no__link"
+                >Путешествие по страницам уникальной культуры региона
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <nav class="nav">
+          <div class="support__service">
+            <span class="support__service-text">Служба поддежрки</span>
+            <ul class="contacts">
+              <li class="contacts__list">
+                <a href="#" class="contac ts__link"> 8 800 555 35 35 </a>
+              </li>
+              <li class="contacts__list">
+                <a href="#" class="contacts__link"> litpenz@gmail.com </a>
+              </li>
+            </ul>
+          </div>
+          <a href="" class="logo">
+            <img src="img/logo.svg" alt="" />
+            LitPenz
+          </a>
+          <div class="social__network">
+            <span class="social__network-text">Следите за новостями</span>
+            <div class="social__network-container">
+              <a href="#" class="social__network-link">
+                <img src="img/VK.svg" alt="VK" />
+              </a>
+              <a href="#" class="social__network-link">
+                <img src="img/TG.svg" alt="TG" />
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </footer>
+  </body>
 </html>
