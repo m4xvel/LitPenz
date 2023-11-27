@@ -1,0 +1,98 @@
+html {
+    background-image: url("../img/backg_2.jpg");
+}
+
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    color: #fff;
+    font-size: 40px;
+    line-height: 60px;
+    max-width: 573px;
+    transition: ease all 0.5s;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.yellow {
+    color: #FFBF1D;
+}
+
+.error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.number {
+    color: #FFBF1D;
+    font-size: 600px;
+    line-height: normal;
+    font-family: gothampro-medium;
+    transition: ease all 0.5s;
+}
+
+.error img {
+    margin-top: 67px;
+    width: 424px;
+    height: 484px;
+    transition: ease all 0.5s;
+}
+
+.form__button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (max-width: 1700px) {
+    .error img {
+        width: 265px;
+        height: 302.5px;
+    }
+}
+
+@media screen and (max-width: 1700px) {
+    .number {
+        font-size: 375px;
+    }
+}
+
+@media screen and (max-width: 1700px) {
+    h1 {
+        font-size: 25px;
+        max-width: 350px;
+    }
+}
+
+h2 {    
+    font-size: 30px;
+    line-height: normal;
+    font-family: gothampro-medium;
+
+}
+
+button {
+    cursor: pointer;
+    color: #FFF;
+    background: #DCA612;
+    margin-top: 18px;
+    width: 187px;
+    height: 50px;
+    font-size: 20px;
+    line-height: normal;
+    font-family: gothampro-medium;
+    border: none;
+}
