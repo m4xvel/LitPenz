@@ -4,11 +4,33 @@
   font-style: normal;
   font-weight: 400;
 }
+
 @font-face {
   font-family: "gothampro-medium";
   src: url(../fonts/gothampro_medium.ttf);
   font-style: normal;
   font-weight: 600;
+}
+
+@font-face {
+  font-family: "inter-light";
+  src: url(../fonts/Inter-Light.ttf);
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "inter-medium";
+  src: url(../fonts/Inter-Medium.ttf);
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "inter-regular";
+  src: url(../fonts/Inter-Regular.ttf);
+  font-style: normal;
+  font-weight: 400;
 }
 
 html {
@@ -38,6 +60,10 @@ img {
   max-width: 100%;
 }
 
+hr {
+  opacity: 0.2;
+}
+
 .header .container {
   max-width: 1648px;
   padding: 0 10px;
@@ -55,7 +81,7 @@ body {
 
 .header .container .nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   height: 68px;
 }
@@ -72,27 +98,22 @@ h2 {
   gap: 60px;
 }
 
+.menu__left {
+  display: flex;
+  justify-content: center;
+  width: 35%;
+
+}
+
+.menu__right {
+  display: flex;
+  justify-content: center;
+  width: 35%;
+}
+
 .menu__link:hover {
   border: none;
   color: #ffbf1d;
-}
-
-.profile {
-  display: flex;
-  align-items: center;
-  gap: 23px;
-}
-
-.profile__text:hover {
-  border: none;
-  color: #ffbf1d;
-}
-
-nav .name {
-  font-family: gothampro-medium;
-  color: #f8bc26;
-  font-size: 32px;
-  line-height: normal;
 }
 
 .main .penza .container {
@@ -236,6 +257,7 @@ nav .name {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 40%;
 }
 
 .support__service-text {
@@ -260,7 +282,7 @@ nav .name {
   align-items: center;
   font-family: gothampro-medium;
   color: #f8bc26;
-  font-size: 32px;
+  font-size: 26px;
   line-height: normal;
 }
 
@@ -274,6 +296,7 @@ nav .name {
   flex-direction: column;
   align-items: center;
   margin-top: 17px;
+  width: 40%;
 }
 
 .social__network-text {
@@ -310,6 +333,11 @@ nav .name {
   text-align: center;
 }
 
+.section__item-o img {
+  max-width: 409px;
+  min-height: 276px;
+}
+
 .section__name {
   display: flex;
   margin-top: 20px;
@@ -325,4 +353,85 @@ nav .name {
 .section__name:hover {
   border: none;
   color: #ffbf1d;
+}
+
+/* PAGE: book.html */
+
+.main .information {
+  margin-top: 91px;
+}
+
+.main .information .container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.container__image {
+  display: flex;
+  flex-direction: column;
+}
+
+.information nav {
+  margin-top: 81px;
+}
+
+.information__text {
+  font-size: 18px;
+  font-family: inter-regular;
+  width: 62.2%;
+  margin-left: 54px;
+}
+
+.book__title {
+  color: #FFBF1D;
+  font-size: 30px;
+  font-family: inter-regular;
+}
+
+.book__information {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-top: 39px;
+}
+
+.book__image img {
+  max-width: 409px;
+  min-height: 276px;
+}
+
+.navigation {
+  display: flex;
+  gap: 28px;
+  color: #959595;
+}
+
+.navigation__item:hover {
+  color: #fff;
+}
+
+/* .navigation__item-1 {
+  display: flex;
+  border-bottom: 1px solid #FBC01C;
+} */
+
+.text__container {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  margin: 0 auto;
+}
+
+.text__container .title {
+  font-size: 24px;
+  color: #fff;
+  font-family: inter-regular;
+  margin-top: 49px;
+}
+
+.text__container .text {
+  font-size: 20px;
+  font-family: inter-light;
+  margin-top: 31px;
 }
