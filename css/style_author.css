@@ -1,0 +1,38 @@
+html {
+  background-image: url("../img/backg_2.jpg");
+}
+
+.author .container {
+  display: flex;
+  justify-content: center;
+  margin-left: 12.6%;
+}
+
+.author .container img {
+  max-width: 825px;
+  max-height: 845px;
+  margin-top: 89px;
+}
+
+.container__position {
+  position: relative;
+}
+
+.fio__container {
+  position: absolute;
+  left: -25%;
+  top: 40%;
+  font-size: 25px;
+  font-family: gothampro-medium;
+}
+
+.bio {
+  color: #fbc01c;
+  background-color: transparent;
+  font-size: 24px;
+  font-family: gothampro-light;
+  border: 2px solid #fbc01c;
+  width: 191px;
+  height: 53px;
+  margin-top: 26px;
+}

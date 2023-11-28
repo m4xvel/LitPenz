@@ -62,6 +62,7 @@ img {
 
 hr {
   opacity: 0.2;
+  margin-top: -1px;
 }
 
 .header .container {
@@ -102,7 +103,6 @@ h2 {
   display: flex;
   justify-content: center;
   width: 35%;
-
 }
 
 .menu__right {
@@ -353,85 +353,4 @@ h2 {
 .section__name:hover {
   border: none;
   color: #ffbf1d;
-}
-
-/* PAGE: book.html */
-
-.main .information {
-  margin-top: 91px;
-}
-
-.main .information .container {
-  display: flex;
-  justify-content: center;
-  position: relative;
-}
-
-.container__image {
-  display: flex;
-  flex-direction: column;
-}
-
-.information nav {
-  margin-top: 81px;
-}
-
-.information__text {
-  font-size: 18px;
-  font-family: inter-regular;
-  width: 62.2%;
-  margin-left: 54px;
-}
-
-.book__title {
-  color: #FFBF1D;
-  font-size: 30px;
-  font-family: inter-regular;
-}
-
-.book__information {
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
-  margin-top: 39px;
-}
-
-.book__image img {
-  max-width: 409px;
-  min-height: 276px;
-}
-
-.navigation {
-  display: flex;
-  gap: 28px;
-  color: #959595;
-}
-
-.navigation__item:hover {
-  color: #fff;
-}
-
-/* .navigation__item-1 {
-  display: flex;
-  border-bottom: 1px solid #FBC01C;
-} */
-
-.text__container {
-  display: flex;
-  flex-direction: column;
-  text-align: justify;
-  margin: 0 auto;
-}
-
-.text__container .title {
-  font-size: 24px;
-  color: #fff;
-  font-family: inter-regular;
-  margin-top: 49px;
-}
-
-.text__container .text {
-  font-size: 20px;
-  font-family: inter-light;
-  margin-top: 31px;
 }
