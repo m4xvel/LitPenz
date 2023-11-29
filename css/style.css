@@ -192,7 +192,7 @@ h2 {
 
 .border {
   width: 40%;
-  border: 1px solid #ffbf1d;
+  border-bottom: 1px dashed #ffbf1d;
   margin-top: 70px;
   transition: ease all 0.5s;
 }
@@ -207,7 +207,7 @@ h2 {
   position: relative;
   text-align: center;
   margin-top: 71px;
-  width: 80%;
+  max-width: 100%;
 }
 
 .main__text {
@@ -219,19 +219,7 @@ h2 {
   font-size: 24px;
   text-align: justify;
   width: 80%;
-  transition: ease all 0.5s;
-}
-
-@media screen and (max-width: 1365px) {
-  .main__text {
-    font-size: 20px;
-  }
-}
-
-@media screen and (max-width: 1150px) {
-  .main__text {
-    font-size: 16px;
-  }
+  font-weight: 400;
 }
 
 /* FOOTER */
@@ -326,6 +314,7 @@ h2 {
   justify-content: space-around;
 }
 
+.section__item-o,
 .section__item {
   display: flex;
   flex-direction: column;
@@ -342,6 +331,7 @@ h2 {
   display: flex;
   margin-top: 20px;
   max-width: 290px;
+  font-weight: 500;
 }
 
 .section__name-no__link {
