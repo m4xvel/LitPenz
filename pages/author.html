@@ -18,22 +18,26 @@
         <nav class="nav">
           <ul class="menu menu__left">
             <li class="menu__list">
-              <a href="#" class="menu__link"> Произведения </a>
+              <a href="../index.html#section-1" class="menu__link">
+                Произведения
+              </a>
             </li>
             <li class="menu__list">
-              <a href="#" class="menu__link"> Авторы </a>
+              <a href="../index.html#section-2" class="menu__link"> Авторы </a>
             </li>
           </ul>
-          <a href="" class="logo">
+          <a href="../index.html" class="logo">
             <img src="../img/logo.svg" alt="" />
             LitPenz
           </a>
           <ul class="menu menu__right">
             <li class="menu__list">
-              <a href="#" class="menu__link"> Отзывы </a>
+              <a href="../index.html#section-3" class="menu__link"> Отзывы </a>
             </li>
             <li class="menu__list">
-              <a href="#" class="menu__link"> О проекте </a>
+              <a href="../index.html#section-4" class="menu__link">
+                О проекте
+              </a>
             </li>
           </ul>
         </nav>
@@ -45,7 +49,9 @@
           <div class="container__position">
             <div class="fio__container">
               <h1 class="fio">Лермонтов Михаил Юрьевич</h1>
-              <button class="bio">Биография</button>
+              <button class="bio" id="bio" onclick="scrollToSection()">
+                Биография
+              </button>
             </div>
             <img src="../img/lermontov-backg.png" alt="" />
             <div class="swiper">
@@ -72,7 +78,7 @@
           </div>
         </div>
       </section>
-      <section class="biography">
+      <section class="biography" id="biography" style="display: none">
         <div class="container">
           <div class="biography__border">
             <span class="title">Биография</span>
@@ -160,6 +166,6 @@
       </div>
     </footer>
     <script src=" https://unpkg.com/swiper@8.4.7/swiper-bundle.min.js"></script>
-    <script src="../js/script.js"></script>
+    <script src="../js/author.js"></script>
   </body>
 </html>

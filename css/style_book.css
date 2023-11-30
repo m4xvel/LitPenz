@@ -61,9 +61,18 @@ html {
   border-bottom: 1px solid #fbc01c;
 }
 
+#underline{
+  height: 2px;
+  background-color: #fbc01c;
+}
+
 .navigation__item-2 {
   display: flex;
   border-bottom: 1px solid #fbc01c;
+}
+
+.navigation__link {
+  cursor: pointer;
 }
 
 .text__container {
