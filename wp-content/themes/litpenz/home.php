@@ -11,13 +11,35 @@ Template Name: home
         <div class="container">
             <h1 class="title">Онлайн-библиотека Пензенского края</h1>
             <div class="search">
-                <button class="сatalog">
-                    <img src="<?php bloginfo('template_url'); ?>/assets/img/catalog.svg" alt="" />
-                    Каталог
-                </button>
-                <form class="search__items">
-                    <input type="text" placeholder="Искать здесь..." class="search__input" />
-                    <button type="submit" class="search__button">Поиск</button>
+                <div class="catalog">
+                    <button class="сatalog__button" id="сatalog__button">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/catalog.svg" alt="" />
+                        Список
+                    </button>
+                    <div class="catalog__pop-up" id="catalog__pop-up" style="display: none;">
+                        <?php
+                        global $post;
+
+                        $myposts = get_posts([
+                            'numberposts' => 5,
+                            'category'    => 3
+                        ]);
+
+                        if ($myposts) {
+                            foreach ($myposts as $post) {
+                                setup_postdata($post);
+                        ?>
+                                <div class="catalog__pop-up__item"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
+                        <?php
+                            }
+                        }
+                        wp_reset_postdata(); ?>
+
+                    </div>
+                </div>
+                <form class="search__items" role="search" method="get" id="searchform" action="<?php echo esc_url(home_url('/')); ?>">
+                    <input type="text" value="<?php echo get_search_query(); ?>" name="s" id="s" placeholder="Искать здесь..." class="search__input" />
+                    <button type="submit" id="searchsubmit" class="search__button">Поиск</button>
                 </form>
             </div>
             <div class="border"></div>
@@ -44,18 +66,28 @@ Template Name: home
         <div class="container">
             <h2 class="section__title">Произведения</h2>
             <div class="section__block">
-                <a href="#" class="section__item-o">
-                    <img src="<?php bloginfo('template_url'); ?>/assets/img/geroi-nashego-vremeny.jpg" alt="" />
-                    <h3 class="section__name">Герой нашего времени</h3>
-                </a>
-                <a href="#" class="section__item-o">
-                    <img src="<?php bloginfo('template_url'); ?>/assets/img/askaldova-mogila.jpg" alt="" />
-                    <h3 class="section__name">Аскольдова могила</h3>
-                </a>
-                <a href="#" class="section__item-o">
-                    <img src="<?php bloginfo('template_url'); ?>/assets/img/oprokinuti-kupol.jpg" alt="" />
-                    <h3 class="section__name">Опрокинутый купол</h3>
-                </a>
+
+                <?php
+                global $post;
+
+                $myposts = get_posts([
+                    'numberposts' => 3,
+                    'category'    => 2
+                ]);
+
+                if ($myposts) {
+                    foreach ($myposts as $post) {
+                        setup_postdata($post);
+                ?>
+                        <a href="<?php the_permalink(); ?>" class="section__item-o">
+                            <?php the_post_thumbnail(array(276, 409)); ?>
+                            <h3 class="section__name"><?php the_title(); ?></h3>
+                        </a>
+                <?php
+                    }
+                }
+                wp_reset_postdata(); ?>
+
             </div>
         </div>
     </section>
@@ -63,60 +95,60 @@ Template Name: home
         <div class="container">
             <h2 class="section__title">Авторы</h2>
             <div class="section__block">
-                <a href="#" class="section__item-o">
-                    <img src="<?php bloginfo('template_url'); ?>/assets/img/lermontov.jpg" alt="" />
-                    <h3 class="section__name">Лермонтов Михаил Юрьевич</h3>
-                </a>
-                <a href="#" class="section__item-o">
-                    <img src="<?php bloginfo('template_url'); ?>/assets/img/zagoskin.jpg" alt="" />
-                    <h3 class="section__name">Загоскин Михаил Николаевич</h3>
-                </a>
-                <a href="#" class="section__item-o">
-                    <img src="<?php bloginfo('template_url'); ?>/assets/img/buyanov.jpg" alt="" />
-                    <h3 class="section__name">Буянов Николай Анатольевич</h3>
-                </a>
+
+                <?php
+                global $post;
+
+                $myposts = get_posts([
+                    'numberposts' => 5,
+                    'category'    => 3
+                ]);
+
+                if ($myposts) {
+                    foreach ($myposts as $post) {
+                        setup_postdata($post);
+                ?>
+                        <a href="<?php the_permalink(); ?>" class="section__item-o">
+                            <?php the_post_thumbnail(); ?>
+                            <h3 class="section__name"><?php the_title(); ?></h3>
+                        </a>
+                <?php
+                    }
+                }
+                wp_reset_postdata(); ?>
+
             </div>
         </div>
     </section>
     <section class="section" id="section-3">
         <h3 class="section__title">Отзывы</h3>
         <div class="container">
-            <div class="reviews__main">
-                <div class="reviews__info">
-                    <span class="nickname">Никнейм</span>
-                    <span>•</span>
-                    <span class="book__title">Название книги</span>
-                </div>
-                <span class="reviews__text">Текст отзыва текст отзыва текст отзыва текст отзыва текст отзыва
-                    текст отзыва текст отзыва текст отзыва текст отзыва</span>
-            </div>
-            <div class="reviews__main">
-                <div class="reviews__info">
-                    <span class="nickname">Никнейм</span>
-                    <span>•</span>
-                    <span class="book__title">Название книги</span>
-                </div>
-                <span class="reviews__text">Текст отзыва текст отзыва текст отзыва текст отзыва текст отзыва
-                    текст отзыва текст отзыва текст отзыва текст отзыва</span>
-            </div>
-            <div class="reviews__main">
-                <div class="reviews__info">
-                    <span class="nickname">Никнейм</span>
-                    <span>•</span>
-                    <span class="book__title">Название книги</span>
-                </div>
-                <span class="reviews__text">Текст отзыва текст отзыва текст отзыва текст отзыва текст отзыва
-                    текст отзыва текст отзыва текст отзыва текст отзыва</span>
-            </div>
-            <div class="reviews__main">
-                <div class="reviews__info">
-                    <span class="nickname">Никнейм</span>
-                    <span>•</span>
-                    <span class="book__title">Название книги</span>
-                </div>
-                <span class="reviews__text">Текст отзыва текст отзыва текст отзыва текст отзыва текст отзыва
-                    текст отзыва текст отзыва текст отзыва текст отзыва</span>
-            </div>
+
+            <?php
+            global $post;
+
+            $myposts = get_posts([
+                'numberposts' => 4,
+                'category'    => 4
+            ]);
+
+            if ($myposts) {
+                foreach ($myposts as $post) {
+                    setup_postdata($post);
+            ?>
+                    <div class="reviews__main">
+                        <div class="reviews__info">
+                            <span class="nickname"><?php the_field('nickname'); ?></span>
+                            <span>•</span>
+                            <span class="book__title"><?php the_field('book_title'); ?></span>
+                        </div>
+                        <span class="reviews__text"><?php the_content(); ?></span>
+                    </div>
+            <?php
+                }
+            }
+            wp_reset_postdata(); ?>
+
         </div>
     </section>
     <section class="section" id="section-4">
